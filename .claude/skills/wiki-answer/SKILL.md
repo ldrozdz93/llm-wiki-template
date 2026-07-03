@@ -1,15 +1,11 @@
 ---
 name: wiki-answer
 description: >-
-  Answer a question or carry out a task using ONLY this repo's local knowledge-base wiki
-  (under `wiki/topics/<slug>/`), never the model's own training knowledge. Use whenever the
-  user asks a practical domain question that a topic in this wiki covers. Trigger on how-to /
-  advice / "what does X say about Y" questions in any covered domain even when the user never
-  mentions the wiki, a slug, or a filename. Routes the question to the right topic and 1–3
-  articles, then gives a concise, coherent answer grounded strictly in the source — no
-  citations, no invented facts, and an explicit "the wiki doesn't cover this" when the source
-  is silent. Do NOT trigger for questions outside the topics present under `wiki/topics/` —
-  those have nothing to draw from here.
+  Answer domain questions or carry out tasks using ONLY this repo's local wiki (under
+  `wiki/topics/<slug>/`), never the model's own training knowledge. Use whenever the user asks
+  a practical how-to, advice, or "what does X say about Y" question in a domain the wiki covers
+  — even when they never mention the wiki, a slug, or a filename. Do NOT trigger for questions
+  outside the topics under `wiki/topics/`; there's nothing here to draw on.
 ---
 
 # Wiki Answer
@@ -71,7 +67,7 @@ The user wants the answer, not a tour of how you found it.
 
 ## Style example
 
-Terse, grounded, no seams. Real answers draw their content from the article bodies you read.
+Terse, grounded, no seams.
 
 Bad: "Great question! According to `foo.md`, the source says… Generally, experts also recommend…"
 Good: a direct answer in the source's own voice, only from what the matched articles state, with
